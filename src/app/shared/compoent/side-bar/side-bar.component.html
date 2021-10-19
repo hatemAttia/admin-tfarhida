@@ -1,0 +1,61 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item active">
+      <a class="nav-link" routerLink="/">
+        <i class="ti-shield menu-icon"></i>
+        <span class="menu-title">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+        <a
+          class="nav-link"
+          data-toggle="collapse"
+          href="#ui-basic"
+          aria-expanded="false"
+          aria-controls="ui-basic"
+        >
+          <i class="ti-palette menu-icon"></i>
+          <span class="menu-title">UI Elements</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-basic">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/tours"
+                href="javascript:void(0)"
+                >tours</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../../pages/ui-features/typography.html"
+                >Typography</a
+              >
+            </li>
+          </ul>
+        </div>
+      </li> 
+    <li class="nav-item">
+      <a class="nav-link"  routerLink="/tours" href="javascript:void(0)">
+        <i class="ti-map-alt  menu-icon"></i>
+        <span class="menu-title">Tours</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../../pages/tables/basic-table.html">
+        <i class="ti-view-list-alt menu-icon"></i>
+        <span class="menu-title">Hotels</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/users">
+        <i class="ti-user menu-icon"></i>
+        <span class="menu-title">Users</span>
+      </a>
+    </li>
+  </ul>
+</nav>
