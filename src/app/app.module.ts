@@ -15,6 +15,7 @@ import { UserComponent } from './modules/user/user.component';
 import { ReservationTourComponent } from './modules/reservation-tour/reservation-tour.component';
 import { ReservationHotelComponent } from './modules/reservation-hotel/reservation-hotel.component';
 import { CategorieComponent } from './modules/categorie/categorie.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CategorieComponent } from './modules/categorie/categorie.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ButtonModule
+    ButtonModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
