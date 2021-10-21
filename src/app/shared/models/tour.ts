@@ -1,5 +1,5 @@
 export interface Tours{
-    id:number;
+    id:string;
     title:string;
     amount:string;
     image:string;
