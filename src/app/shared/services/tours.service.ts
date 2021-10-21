@@ -8,7 +8,7 @@ export class ToursService {
   tours :Array<Tours>
   constructor() { 
     this.tours=[{
-      id:1,
+      id:"1",
       title:"Mauritius",
       amount:"$1450",
       image:"assets/images/intro_1.jpg",
@@ -17,7 +17,7 @@ export class ToursService {
       datestart:Date.now(),
       dateend:Date.now(),
     },{
-      id:1,
+      id:"1",
       title:"Greece",
       amount:"$1950",
       image:"assets/images/intro_2.jpg",
@@ -28,7 +28,7 @@ export class ToursService {
       dateend:Date.now(),
     },
     {
-      id:1,
+      id:"1",
       title:"Scotland",
       amount:"$1250",
       rate:2,
@@ -37,7 +37,7 @@ export class ToursService {
       datestart:Date.now(),
       dateend:Date.now(),
     },{
-      id:1,
+      id:"1",
       title:"Mauritius",
       amount:"$1450",
       image:"assets/images/intro_1.jpg",
@@ -46,7 +46,7 @@ export class ToursService {
       datestart:Date.now(),
       dateend:Date.now(),
     },{
-      id:1,
+      id:"1",
       title:"Mauritius",
       amount:"$1450",
       image:"assets/images/intro_3.jpg",
