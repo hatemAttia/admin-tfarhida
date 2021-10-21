@@ -10,6 +10,11 @@ import { HomeComponent } from './home/home.component';
 import { SideBarComponent } from './shared/compoent/side-bar/side-bar.component';
 import { LoginComponent } from './auth/login/login.component';
 import {ButtonModule} from 'primeng/button';
+import { HotelComponent } from './modules/hotel/hotel.component';
+import { UserComponent } from './modules/user/user.component';
+import { ReservationTourComponent } from './modules/reservation-tour/reservation-tour.component';
+import { ReservationHotelComponent } from './modules/reservation-hotel/reservation-hotel.component';
+import { CategorieComponent } from './modules/categorie/categorie.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,12 @@ import {ButtonModule} from 'primeng/button';
     FooterComponent,
     HomeComponent,
     SideBarComponent,
-    LoginComponent
+    LoginComponent,
+    HotelComponent,
+    UserComponent,
+    ReservationTourComponent,
+    ReservationHotelComponent,
+    CategorieComponent
   ],
   imports: [
     BrowserModule,
