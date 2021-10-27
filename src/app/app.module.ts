@@ -16,6 +16,10 @@ import { ReservationTourComponent } from './modules/reservation-tour/reservation
 import { ReservationHotelComponent } from './modules/reservation-hotel/reservation-hotel.component';
 import { CategorieComponent } from './modules/categorie/categorie.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { DialogModule } from 'primeng/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {RatingModule} from 'primeng/rating';
+import { FilterService, PrimeNGConfig } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -36,9 +40,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    DialogModule,
+    
   ],
-  providers: [],
+  providers: [PrimeNGConfig,FilterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
