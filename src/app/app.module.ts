@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {RatingModule} from 'primeng/rating';
 import { FilterService, PrimeNGConfig } from 'primeng/api';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,12 +39,15 @@ import { FilterService, PrimeNGConfig } from 'primeng/api';
     CategorieComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
     NgbModule,
     BrowserAnimationsModule,
     DialogModule,
+    ReactiveFormsModule,
+
     
   ],
   providers: [PrimeNGConfig,FilterService],

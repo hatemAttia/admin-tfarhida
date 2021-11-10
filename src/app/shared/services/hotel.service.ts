@@ -1,19 +1,22 @@
 import { Injectable } from '@angular/core';
 import { hotel } from '../models/hotel';
+import { HttpClient, HttpClientModule } from "@angular/common/http";
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class HotelService {
   hotel :Array<hotel>
-  constructor() { 
-    this.hotel=[{
+  constructor(private http: HttpClient) { 
+    this.hotel=[
+      {
       id:"1",
       name:"sahra beach",
       nb_chambre:6,
       type:"*****",
       prix:200,
-      adresse:"sahra@gmail.com",
+      
       image:"assets/images/hotel.png"
     },
     {
@@ -22,7 +25,7 @@ export class HotelService {
       nb_chambre:5,
       type:"****",
       prix:100,
-      adresse:"mouradiclub@gmail.com",
+      
       image:"assets/images/hotel.png"
     },
     {
@@ -31,7 +34,7 @@ export class HotelService {
       nb_chambre:6,
       type:"*****",
       prix:150,
-      adresse:"talasa@gmail.com",
+     
       image:"assets/images/hotel.png"
     }
   ];
@@ -39,7 +42,10 @@ export class HotelService {
   }
 
   getHotel(){
-   return this.hotel;
+    return this.http.get("http://localhost:3001/hotel");
   }
+  addhotel(data) {
+    return this.http.post("http://localhost:3001/hotel",data);
   
+}
 }

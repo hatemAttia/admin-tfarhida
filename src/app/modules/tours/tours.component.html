@@ -1,3 +1,46 @@
+<p-dialog
+    header="Ajoute Tour"
+    [(visible)]="displayBasic3"
+    [modal]="true"
+    [style]="{ width: '60vw' }"
+    [maximizable]="true"
+    [baseZIndex]="10000"
+    [draggable]="false"
+    [resizable]="false"
+  >
+
+  <div class="card-body">
+    <h4 class="card-title">Tours</h4>
+    
+    <form class="forms-sample" [formGroup]="toursForm">
+      <div class="form-group">
+        <label for="exampleInputUsername1"> Table Tour </label>
+        <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Titre" formControlName="titre">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Amount</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Amount" formControlName="amount">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Description</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Description" formControlName="description">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputConfirmPassword1">Rate</label>
+        <input type="number" class="form-control" id="exampleInputConfirmPassword1" placeholder="rate" formControlName="rate">
+      </div>
+      <div class="form-check form-check-flat form-check-primary">
+       
+      </div>
+      <button type="submit" class="btn btn-primary mr-2">save</button>
+      <button (click)="displayBasic3 = false" class="btn btn-light">Cancel</button>
+    </form>
+  </div>
+
+</p-dialog>
+
+
+
 <div *ngIf="_dataRead">
   <p-dialog
     header=" {{ _dataRead.title }}"
@@ -11,7 +54,7 @@
   >
     <div class="row">
       <div class="col-6">
-        <img src="{{ _dataRead.image }}" style="width: 100%" />
+        <img src="assets/images/{{ _dataRead.image }}" style="width: 100%" />
       </div>
       <div class="col-6">
         <div class="row">
@@ -46,6 +89,26 @@
       <div class="card">
         <div class="card-body">
           <h4 class="card-title">TOURS</h4>
+          <button
+          pButton
+          pRipple
+          (click)="showBasicDialog3()"
+          type="button"
+          title="ajouter"
+          class="p-button-rounded"
+          style="margin-right: 5px"
+        >ajouter </button>
+
+
+       
+        <ng-template pTemplate="footer">
+          <p-button
+            icon="pi pi-check"
+            (click)="displayBasic3 = false"
+            label="Cancel"
+            class="p-button-text"
+          ></p-button>
+        </ng-template>
           <p class="card-description">Tours table</p>
           <div class="table-responsive">
             <table class="table table-striped">
@@ -62,7 +125,7 @@
               <tbody>
                 <tr *ngFor="let tour of _tours">
                   <td class="py-1">
-                    <img src="{{ tour.image }}" alt="image" />
+                    <img src="assets/images/{{ tour.image }}" alt="image" />
                   </td>
                   <td>{{ tour.title }}</td>
                   <td>{{ tour.amount }}</td>
@@ -85,6 +148,7 @@
                       icon="pi pi-pencil"
                       class="p-button-rounded p-button-warning"
                       style="margin-right: 5px"
+                      (click)="showBasicDialog(tour)"
                     ></button>
                     <button
                       pButton
